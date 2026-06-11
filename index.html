@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>欢迎页面</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --primary: #7c3aed;
+      --primary-dark: #5b21b6;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --card: rgba(255, 255, 255, 0.82);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 32px;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.32), transparent 36%),
+        radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.28), transparent 34%),
+        linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    }
+
+    .hero-card {
+      width: min(100%, 680px);
+      padding: 56px 48px;
+      text-align: center;
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 28px;
+      box-shadow: 0 24px 80px rgba(79, 70, 229, 0.2);
+      backdrop-filter: blur(18px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: var(--primary-dark);
+      background: rgba(124, 58, 237, 0.12);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.06em;
+    }
+
+    p {
+      max-width: 520px;
+      margin: 22px auto 34px;
+      color: var(--muted);
+      font-size: 1.14rem;
+      line-height: 1.8;
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 15px 28px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), #0ea5e9);
+      box-shadow: 0 16px 32px rgba(124, 58, 237, 0.28);
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.32);
+    }
+
+    button:focus-visible {
+      outline: 4px solid rgba(14, 165, 233, 0.35);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 18px;
+      }
+
+      .hero-card {
+        padding: 40px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero-card">
+    <div class="eyebrow">✨ 简洁 · 优雅 · 现代</div>
+    <h1>欢迎来到我的页面</h1>
+    <p>
+      这是一个简单又好看的 HTML 页面示例，包含醒目的标题、舒适的说明文字和一个带有交互动效的按钮。
+    </p>
+    <button type="button">立即开始</button>
+  </main>
+</body>
+</html>
